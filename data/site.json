@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "siteUrl": "https://furkanguven.space",
+    "title": "Furkan Güven",
+    "description": "Tıp öğrencisi. FastAPI, Next.js ve React Native ile uygulama geliştiriyorum."
+  },
+  "identity": {
+    "name": "Furkan Güven",
+    "headline": "Tıp fakültesi öğrencisi. Backend, web ve mobil tarafında çalışıyorum.",
+    "location": "Elazığ, Türkiye"
+  },
+  "links": {
+    "github": {
+      "url": "https://github.com/drFurkanGuven",
+      "username": "drFurkanGuven"
+    },
+    "linkedin": {
+      "url": "https://www.linkedin.com/in/furkan-g%C3%BCven-933647216"
+    },
+    "email": null
+  },
+  "github": {
+    "username": "drFurkanGuven",
+    "featuredRepos": ["klinikiq"],
+    "excludeRepos": []
+  },
+  "projects": [
+    {
+      "id": "klinikiq",
+      "name": "KlinikIQ",
+      "description": "Tıp öğrencileri için vaka simülasyonu. FastAPI backend, Next.js frontend, React Native mobil uygulama.",
+      "url": "https://klinikiq.furkanguven.space",
+      "repo": "klinikiq",
+      "stack": ["Python", "FastAPI", "Next.js", "PostgreSQL", "Docker", "React Native"]
+    }
+  ],
+  "experience": [],
+  "education": [],
+  "certificates": [],
+  "skills": [
+    "Python",
+    "TypeScript",
+    "FastAPI",
+    "Next.js",
+    "React Native",
+    "PostgreSQL",
+    "Docker",
+    "Linux",
+    "Git"
+  ],
+  "linkedin": {
+    "syncEnabled": true,
+    "lastSynced": null,
+    "source": "playwright",
+    "profilePath": "./data/profile.json"
+  }
+}

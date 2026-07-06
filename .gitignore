@@ -42,7 +42,11 @@ build/
 .next/
 out/
 
-# LinkedIn export (gerçek veri yerel tutulur)
+# LinkedIn scraper
+.auth/
+data/profile.json
+
+# Legacy
 data/linkedin-export.json
 
 # Sync script env
