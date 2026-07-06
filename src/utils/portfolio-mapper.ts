@@ -123,8 +123,11 @@ function mapCertificate(cert: PortfolioData["certifications"][0]) {
 
 function projectId(project: PortfolioProject): string {
   if (/klinikiq/i.test(project.title)) return "klinikiq";
-  return project.id.replace(/^proj-/, "").replace(/-/g, "-") ||
-    project.title.toLowerCase().replace(/[^a-z0-9]+/gi, "-").replace(/^-|-$/g, "");
+  if (/bkzs|anti-spoofing/i.test(project.title)) return "bkzs";
+  if (/usturlap|astrolabe/i.test(project.title)) return "digital-astrolabe";
+  const fromId = project.id.replace(/^proj-/, "");
+  if (fromId && !/^\d+$/.test(fromId)) return fromId;
+  return project.title.toLowerCase().replace(/[^a-z0-9]+/gi, "-").replace(/^-|-$/g, "") || "project";
 }
 
 function mapProject(project: PortfolioProject): SiteConfig["projects"][0] {

@@ -44,7 +44,7 @@
       ]
     },
     {
-      "id": "2",
+      "id": "bkzs",
       "name": "BKZS Anti-Spoofing Çok Katmanlı Anomali Tespiti",
       "description": "TUA (Türkiye Uzay Ajansı) Hackathon'u kapsamında geliştirilen, uydu ve uzay sistemleri için çok katmanlı güvenlik ve spoofing engelleme projesi.",
       "url": null,
@@ -56,7 +56,7 @@
       ]
     },
     {
-      "id": "3",
+      "id": "digital-astrolabe",
       "name": "Dijital Usturlap (Digital Astrolabe)",
       "description": "Tarihsel astronomik hesaplamaları dijital ortama taşıyan, gök cisimlerinin konumlarını simüle eden yazılım aracı.",
       "url": null,
@@ -164,7 +164,7 @@
   ],
   "linkedin": {
     "syncEnabled": false,
-    "lastSynced": "2026-07-06T08:52:29.578Z",
+    "lastSynced": "2026-07-06T08:52:39.462Z",
     "source": "portfolio.json",
     "portfolioPath": "./data/portfolio.json"
   }
