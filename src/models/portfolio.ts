@@ -53,7 +53,7 @@ export interface PortfolioData {
 
 export interface SiteConfig {
   meta: { siteUrl: string; title: string; description: string };
-  identity: { name: string; headline: string; about?: string; location: string };
+  identity: { name: string; headline: string; about?: string; photo?: string; location: string };
   links: {
     github: { url: string; username: string };
     linkedin: { url: string };

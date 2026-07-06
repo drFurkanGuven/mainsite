@@ -15,6 +15,7 @@
  * @property {string} name
  * @property {string} headline
  * @property {string} [about]
+ * @property {string} [photo]
  * @property {string} [location]
  */
 

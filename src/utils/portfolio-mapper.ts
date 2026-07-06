@@ -42,6 +42,7 @@ export function mapPortfolioToSite(portfolio: PortfolioData, existing?: SiteConf
       headline,
       about: trimAbout(profile.about),
       location,
+      photo: existing?.identity.photo ?? "assets/photo.jpeg",
     },
     links: {
       github: { url: GITHUB_URL, username: GITHUB_USER },
@@ -124,7 +125,6 @@ function mapCertificate(cert: PortfolioData["certifications"][0]) {
 function projectId(project: PortfolioProject): string {
   if (/klinikiq/i.test(project.title)) return "klinikiq";
   if (/bkzs|anti-spoofing/i.test(project.title)) return "bkzs";
-  if (/usturlap|astrolabe/i.test(project.title)) return "digital-astrolabe";
   const fromId = project.id.replace(/^proj-/, "");
   if (fromId && !/^\d+$/.test(fromId)) return fromId;
   return project.title.toLowerCase().replace(/[^a-z0-9]+/gi, "-").replace(/^-|-$/g, "") || "project";

@@ -61,16 +61,31 @@ export function renderHero(profile) {
 
   root.replaceChildren(
     el("div", { className: "container container--narrow fade-in" }, [
-      el("h1", { className: "hero__name", textContent: profile.identity.name }),
-      el("p", { className: "hero__headline", textContent: profile.identity.headline }),
-      profile.identity.about
-        ? el("p", { className: "hero__about", textContent: profile.identity.about })
-        : null,
-      profile.identity.location
-        ? el("p", { className: "hero__meta", textContent: profile.identity.location })
-        : null,
-      el("ul", { className: "hero__links", role: "list" }, links),
-    ].filter(Boolean))
+      el("div", { className: "hero__layout" }, [
+        profile.identity.photo
+          ? el("img", {
+              className: "hero__photo",
+              src: profile.identity.photo,
+              alt: `${profile.identity.name} profil fotoğrafı`,
+              width: "80",
+              height: "80",
+              loading: "eager",
+              decoding: "async",
+            })
+          : null,
+        el("div", { className: "hero__content" }, [
+          el("h1", { className: "hero__name", textContent: profile.identity.name }),
+          el("p", { className: "hero__headline", textContent: profile.identity.headline }),
+          profile.identity.about
+            ? el("p", { className: "hero__about", textContent: profile.identity.about })
+            : null,
+          profile.identity.location
+            ? el("p", { className: "hero__meta", textContent: profile.identity.location })
+            : null,
+          el("ul", { className: "hero__links", role: "list" }, links),
+        ].filter(Boolean)),
+      ].filter(Boolean)),
+    ])
   );
 }
 

@@ -238,6 +238,45 @@ a:hover { color: var(--text-secondary); }
   .hero { padding-block: var(--space-3xl) var(--space-2xl); }
 }
 
+.hero__layout {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+@media (min-width: 640px) {
+  .hero__layout { gap: var(--space-lg); }
+}
+
+.hero__photo {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  background: var(--bg-subtle);
+}
+
+@media (min-width: 640px) {
+  .hero__photo {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero__photo {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+.hero__content {
+  flex: 1;
+  min-width: 0;
+}
+
 .hero__name {
   font-size: clamp(1.375rem, 4vw, 1.75rem);
   font-weight: 600;
