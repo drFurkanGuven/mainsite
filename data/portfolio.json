@@ -112,12 +112,6 @@
       "title": "BKZS Anti-Spoofing Çok Katmanlı Anomali Tespiti",
       "description": "TUA (Türkiye Uzay Ajansı) Hackathon'u kapsamında geliştirilen, uydu ve uzay sistemleri için çok katmanlı güvenlik ve spoofing engelleme projesi.",
       "techStack": ["Python", "Siber Güvenlik", "Veri Analizi"]
-    },
-    {
-      "id": "proj-3",
-      "title": "Dijital Usturlap (Digital Astrolabe)",
-      "description": "Tarihsel astronomik hesaplamaları dijital ortama taşıyan, gök cisimlerinin konumlarını simüle eden yazılım aracı.",
-      "techStack": ["Astronomi", "Matematiksel Modelleme", "Python"]
     }
   ],
   "skills": {

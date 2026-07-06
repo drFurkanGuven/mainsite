@@ -54,18 +54,6 @@
         "Siber Güvenlik",
         "Veri Analizi"
       ]
-    },
-    {
-      "id": "digital-astrolabe",
-      "name": "Dijital Usturlap (Digital Astrolabe)",
-      "description": "Tarihsel astronomik hesaplamaları dijital ortama taşıyan, gök cisimlerinin konumlarını simüle eden yazılım aracı.",
-      "url": null,
-      "repo": null,
-      "stack": [
-        "Astronomi",
-        "Matematiksel Modelleme",
-        "Python"
-      ]
     }
   ],
   "experience": [
@@ -164,7 +152,7 @@
   ],
   "linkedin": {
     "syncEnabled": false,
-    "lastSynced": "2026-07-06T08:53:04.027Z",
+    "lastSynced": "2026-07-06T08:55:45.144Z",
     "source": "portfolio.json",
     "portfolioPath": "./data/portfolio.json"
   }
