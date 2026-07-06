@@ -1,0 +1,27 @@
+{
+  "experience": [
+    {
+      "period": "2024 —",
+      "title": "KlinikIQ",
+      "role": "Geliştirici",
+      "description": "Simülasyon motoru, API, admin paneli ve iOS uygulaması.",
+      "items": [
+        "FastAPI + PostgreSQL backend",
+        "Next.js frontend, Docker Compose deploy"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "period": "Devam ediyor",
+      "title": "Tıp Fakültesi",
+      "institution": "Fırat Üniversitesi"
+    }
+  ],
+  "certificates": [
+    {
+      "period": "2025",
+      "title": "Deneysel Hayvan Kullanım Sertifikası"
+    }
+  ]
+}

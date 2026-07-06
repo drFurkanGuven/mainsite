@@ -42,6 +42,8 @@ build/
 .next/
 out/
 
-# Sunucuya özel yapılandırma
-*.local
-.htpasswd
+# LinkedIn export (gerçek veri yerel tutulur)
+data/linkedin-export.json
+
+# Sync script env
+.env.sync
