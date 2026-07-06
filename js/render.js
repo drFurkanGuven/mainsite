@@ -63,6 +63,9 @@ export function renderHero(profile) {
     el("div", { className: "container container--narrow fade-in" }, [
       el("h1", { className: "hero__name", textContent: profile.identity.name }),
       el("p", { className: "hero__headline", textContent: profile.identity.headline }),
+      profile.identity.about
+        ? el("p", { className: "hero__about", textContent: profile.identity.about })
+        : null,
       profile.identity.location
         ? el("p", { className: "hero__meta", textContent: profile.identity.location })
         : null,

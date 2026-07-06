@@ -1,6 +1,6 @@
 import { loadEnv } from "./utils/env.js";
 import { logger } from "./utils/logger.js";
-import { createSession, ensureAuthenticated, closeSession } from "./auth/linkedin-auth.js";
+import { createSession, ensureAuthenticated, closeSession, assertLoggedInBeforeScrape } from "./auth/linkedin-auth.js";
 import { emptyProfile } from "./models/profile.js";
 import { runScraperSafe } from "./scrapers/base.js";
 import { scrapePersonal } from "./scrapers/personal.js";
@@ -20,7 +20,6 @@ import {
   saveProfile,
 } from "./utils/incremental.js";
 import { validateProfile } from "./utils/validate.js";
-import { syncSiteFromLinkedIn } from "./utils/site-sync.js";
 import type { ScraperContext } from "./scrapers/types.js";
 
 async function main(): Promise<void> {
@@ -31,6 +30,7 @@ async function main(): Promise<void> {
 
   try {
     await ensureAuthenticated(session, env);
+    await assertLoggedInBeforeScrape(session.page, env.profileUrl);
 
     const ctx: ScraperContext = {
       page: session.page,
@@ -64,9 +64,8 @@ async function main(): Promise<void> {
     const validated = validateProfile(merged);
 
     await saveProfile(env.profileOutputPath, validated);
-    await syncSiteFromLinkedIn(env.siteConfigPath, validated);
 
-    logger.info("Sync completed successfully");
+    logger.info("Sync completed — site content is managed via npm run import-portfolio");
     if (validated._sync?.changes.length) {
       logger.info(`Changes: ${validated._sync.changes.join(", ")}`);
     }

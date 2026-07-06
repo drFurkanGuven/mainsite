@@ -2,6 +2,7 @@ import { config } from "dotenv";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { existsSync } from "node:fs";
+import { resolveBrowserEngine, authStatePathForEngine, browserProfileDir, type BrowserEngine } from "./browser.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "../..");
@@ -14,6 +15,8 @@ export interface EnvConfig {
   profileUrl: string;
   headless: boolean;
   slowMo: number;
+  browser: BrowserEngine;
+  browserProfileDir: string;
   rootDir: string;
   authStatePath: string;
   profileOutputPath: string;
@@ -28,17 +31,27 @@ function requireEnv(key: string): string {
   return value;
 }
 
+function optionalEnv(key: string, fallback = ""): string {
+  return process.env[key]?.trim() || fallback;
+}
+
 export function loadEnv(): EnvConfig {
+  const browser = resolveBrowserEngine();
+  const rootDir = ROOT;
+  const manualLogin = process.env.LINKEDIN_MANUAL_LOGIN !== "false";
+
   return {
-    email: requireEnv("LINKEDIN_EMAIL"),
-    password: requireEnv("LINKEDIN_PASSWORD"),
+    email: manualLogin ? optionalEnv("LINKEDIN_EMAIL") : requireEnv("LINKEDIN_EMAIL"),
+    password: manualLogin ? optionalEnv("LINKEDIN_PASSWORD") : requireEnv("LINKEDIN_PASSWORD"),
     profileUrl: requireEnv("LINKEDIN_PROFILE_URL").replace(/\/?$/, "/"),
     headless: process.env.LINKEDIN_HEADLESS !== "false",
     slowMo: Number(process.env.LINKEDIN_SLOW_MO || 0),
-    rootDir: ROOT,
-    authStatePath: resolve(ROOT, ".auth/linkedin-state.json"),
-    profileOutputPath: resolve(ROOT, "data/profile.json"),
-    siteConfigPath: resolve(ROOT, "data/site.json"),
+    browser,
+    browserProfileDir: browserProfileDir(rootDir, browser),
+    rootDir,
+    authStatePath: authStatePathForEngine(rootDir, browser),
+    profileOutputPath: resolve(rootDir, "data/profile.json"),
+    siteConfigPath: resolve(rootDir, "data/site.json"),
   };
 }
 

@@ -4,8 +4,9 @@
   "type": "module",
   "scripts": {
     "sync-linkedin": "tsx src/index.ts",
+    "import-portfolio": "tsx src/import-portfolio.ts",
     "build": "tsc --noEmit",
-    "postinstall": "playwright install chromium"
+    "postinstall": "playwright install webkit"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

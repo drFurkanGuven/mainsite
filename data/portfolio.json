@@ -1,0 +1,148 @@
+{
+  "profile": {
+    "name": "Furkan Güven",
+    "title": "Tıp Öğrencisi & Geliştirici",
+    "location": {
+      "city": "Elazığ",
+      "hometown": "Ordu",
+      "country": "Türkiye"
+    },
+    "about": "Fırat Üniversitesi'nde tıp eğitimi (Dönem 3) alırken, biyolojik ve silikon ağların kesişimine, nöromorfik sistemlere ve yazılım geliştirmeye odaklanan çok yönlü bir öğrenciyim. Topoğrafik ve mantıksal öğrenme modellerini teknolojiyle birleştirerek klinik süreçleri dijitalleştirmeyi amaçlıyorum. Linux sistemlerine, donanım onarımına ve astrofiziğe duyduğum ilgi, problemlere multidisipliner bir perspektiften yaklaşmamı sağlıyor.",
+    "socials": {
+      "linkedin": "https://linkedin.com/in/furkanguven",
+      "github": "https://github.com/furkanguven",
+      "website": "https://klinikiq.furkanguven.space"
+    }
+  },
+  "experience": [
+    {
+      "id": "exp-1",
+      "company": "Fırat Üniversitesi",
+      "role": "Hasta Bakıcı (Stajyer)",
+      "startDate": "2025-11",
+      "endDate": "Present",
+      "duration": "9 ay",
+      "location": "Elazığ, Türkiye (Asya)",
+      "type": "Yarı zamanlı",
+      "description": "İŞKUR Gençlik Programı kapsamında, Enfeksiyon Hastalıkları ve Klinik Mikrobiyoloji servisinde görev aldım. Görev sürem boyunca enfeksiyon kontrol protokollerinin eksiksiz uygulanması, sterilizasyon ve hijyen standartlarının korunması, hasta bakımı ve klinik destek süreçlerinde aktif rol oynayarak multidisipliner sağlık ekibine katkıda bulundum.",
+      "skills": ["Etkili İletişim", "Enfeksiyon Kontrolü"]
+    },
+    {
+      "id": "exp-2",
+      "company": "Fırat Üniversitesi",
+      "role": "Tıp Öğrencisi",
+      "startDate": "2024-10",
+      "endDate": "Present",
+      "duration": "1 yıl 10 ay",
+      "location": "Elazığ, Türkiye",
+      "type": "Tam zamanlı",
+      "description": "Fırat Üniversitesi Tıp Fakültesi bünyesinde tıp eğitimime devam etmekteyim. Temel tıp bilimleri (Anatomi, Fizyoloji, Histoloji vb.) eğitimlerimin büyük bir kısmını başarıyla tamamlayarak, klinik öncesi dönemin son aşaması olan Dönem 3'e geçmiş bulunmaktayım. Akademik eğitimimin yanı sıra klinik simülasyonlar, saha pratikleri ve sağlık teknolojileri ile yakından ilgileniyorum.",
+      "skills": ["Klinik Araştırma", "Biyoloji"]
+    },
+    {
+      "id": "exp-3",
+      "company": "Deneyap Türkiye",
+      "role": "Öğrenci",
+      "startDate": "2022-10",
+      "endDate": "2024-11",
+      "duration": "2 yıl 2 ay",
+      "location": "Ordu, Türkiye (Ofiste)",
+      "type": "Tam zamanlı",
+      "description": "Teknoloji, mühendislik ve proje geliştirme odaklı uzun dönemli eğitim süreçlerine dahil oldum.",
+      "skills": ["Malzeme Bilimi", "AutoCAD", "Assembly Dili", "C", "C++", "Python"]
+    },
+    {
+      "id": "exp-4",
+      "company": "TÜBİTAK BİDEB",
+      "role": "Öğrenci",
+      "startDate": "2023-09",
+      "endDate": "2023-10",
+      "duration": "2 ay",
+      "location": "Afyonkarahisar, Türkiye",
+      "type": "Tam zamanlı",
+      "description": "TÜBİTAK Bilim Olimpiyatları Astronomi-Astrofizik Yaz Okulu bünyesinde yoğunlaştırılmış teorik ve pratik eğitimler aldım.",
+      "skills": ["İstatistik", "Astrophysics", "Observational Astronomy", "Spherical Geometry"]
+    }
+  ],
+  "education": [
+    {
+      "id": "edu-1",
+      "institution": "Fırat Üniversitesi",
+      "degree": "Doctor of Medicine - MD, Medicine",
+      "startDate": "2024-09",
+      "endDate": "2030-08",
+      "skills": ["Analitik Beceriler", "Biyofizik"]
+    },
+    {
+      "id": "edu-2",
+      "institution": "Ordu Fen Lisesi",
+      "degree": "Fen Lisesi",
+      "startDate": "2020",
+      "endDate": "2024",
+      "skills": ["Çevreyle Uyum Becerisi", "Sunumlar", "Assembly Dili"]
+    }
+  ],
+  "certifications": [
+    {
+      "id": "cert-1",
+      "title": "Deney Hayvanları Kullanım Sertifikası (Kategori A - HADMEK/HADYEK Onaylı) / Certificate of Animal Use in Experimental Research (Category A)",
+      "issuer": "Fırat Üniversitesi",
+      "issueDate": "2026-06",
+      "credentialId": "40850",
+      "skills": []
+    },
+    {
+      "id": "cert-2",
+      "title": "Uygulamalı Sızma Testi Eğitimi",
+      "issuer": "Türkiye Siber Güvenlik Kümelenmesi",
+      "issueDate": "2023-07",
+      "skills": ["Assembly Dili", "Siber Güvenlik"]
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-1",
+      "title": "KlinikIQ",
+      "url": "klinikiq.furkanguven.space",
+      "description": "TUS ve USMLE sınavlarına hazırlanan tıp öğrencileri için geliştirilmiş, FastAPI ve React tabanlı kapsamlı bir klinik vaka simülasyon platformu. Teori ve pratiği birleştiren interaktif bir dijital deneyim sunar.",
+      "techStack": ["FastAPI", "React", "Linux (Fedora VPS)"]
+    },
+    {
+      "id": "proj-2",
+      "title": "BKZS Anti-Spoofing Çok Katmanlı Anomali Tespiti",
+      "description": "TUA (Türkiye Uzay Ajansı) Hackathon'u kapsamında geliştirilen, uydu ve uzay sistemleri için çok katmanlı güvenlik ve spoofing engelleme projesi.",
+      "techStack": ["Python", "Siber Güvenlik", "Veri Analizi"]
+    },
+    {
+      "id": "proj-3",
+      "title": "Dijital Usturlap (Digital Astrolabe)",
+      "description": "Tarihsel astronomik hesaplamaları dijital ortama taşıyan, gök cisimlerinin konumlarını simüle eden yazılım aracı.",
+      "techStack": ["Astronomi", "Matematiksel Modelleme", "Python"]
+    }
+  ],
+  "skills": {
+    "medical_and_clinical": [
+      "Klinik Araştırma",
+      "Biyoloji",
+      "Biyofizik",
+      "Enfeksiyon Kontrolü"
+    ],
+    "software_and_engineering": [
+      "Python",
+      "C",
+      "C++",
+      "FastAPI",
+      "Next.js",
+      "React Native",
+      "PostgreSQL",
+      "Docker",
+      "Linux",
+      "Siber Güvenlik"
+    ],
+    "science_and_astrophysics": [
+      "Astrofizik",
+      "İstatistik",
+      "Analitik Beceriler"
+    ]
+  }
+}

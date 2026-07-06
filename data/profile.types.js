@@ -14,6 +14,7 @@
  * @typedef {Object} ProfileIdentity
  * @property {string} name
  * @property {string} headline
+ * @property {string} [about]
  * @property {string} [location]
  */
 

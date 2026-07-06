@@ -250,6 +250,14 @@ a:hover { color: var(--text-secondary); }
   font-size: clamp(0.9375rem, 2.5vw, 1.0625rem);
   color: var(--text-secondary);
   max-width: 36em;
+  margin: 0 0 var(--space-md);
+}
+
+.hero__about {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  max-width: 40em;
+  line-height: 1.6;
   margin: 0 0 var(--space-lg);
 }
 

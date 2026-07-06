@@ -71,11 +71,20 @@ export async function dismissOverlays(page: Page): Promise<void> {
 export async function safeNavigate(page: Page, url: string): Promise<void> {
   await withRetry(
     async () => {
-      await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60_000 });
+      const response = await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60_000 });
+      if (response && response.status() === 999) {
+        throw new Error("LinkedIn rate limit or auth block");
+      }
       await dismissOverlays(page);
-      await page.waitForTimeout(800);
+      await page.waitForLoadState("networkidle", { timeout: 15_000 }).catch(() => {});
+      await page.waitForTimeout(1200);
+
+      const title = (await page.title().catch(() => "")).toLowerCase();
+      if (/join linkedin|linkedin'e katıl|sign in|authwall/.test(title)) {
+        throw new Error("Auth wall — login required");
+      }
     },
-    { label: `navigate ${url}` }
+    { label: `navigate ${url}`, attempts: 2 }
   );
 }
 
@@ -92,33 +101,39 @@ export function detailsUrl(profileUrl: string, section: string): string {
 
 /** Parse LinkedIn list items from detail pages */
 export async function extractListItems(page: Page): Promise<Locator[]> {
+  await page.waitForLoadState("domcontentloaded").catch(() => {});
+
+  const itemSelectors = [
+    "main li.pvs-list__paged-list-item",
+    "main li.artdeco-list__item",
+    "div.pvs-list__container > ul > li",
+    "main ul.pvs-list > li",
+    "div[data-view-name='profile-component-entity']",
+  ];
+
+  for (const sel of itemSelectors) {
+    const items = page.locator(sel);
+    const count = await items.count();
+    if (count > 0) {
+      log.debug(`List items via: ${sel} (${count})`);
+      return Array.from({ length: count }, (_, i) => items.nth(i));
+    }
+  }
+
   const container = await queryAll(page, [
     "main div.scaffold-finite-scroll__content ul",
     "main ul.pvs-list",
-    "div[data-view-name='profile-component-entity']",
     "main ul",
   ]);
 
   if (!container) return [];
 
-  const itemSelectors = [
-    "li.pvs-list__paged-list-item",
-    "li.artdeco-list__item",
-    "div[data-view-name='profile-component-entity']",
-  ];
-
-  for (const sel of itemSelectors) {
-    const items = container.locator(sel);
-    const count = await items.count();
-    if (count > 0) return Array.from({ length: count }, (_, i) => items.nth(i));
+  const count = await container.locator("> li").count();
+  if (count > 0) {
+    return Array.from({ length: count }, (_, i) => container.locator("> li").nth(i));
   }
 
-  const count = await container.count();
-  if (count > 1) {
-    return Array.from({ length: count }, (_, i) => container.nth(i));
-  }
-
-  return [container];
+  return [];
 }
 
 export async function extractItemTexts(item: Locator): Promise<string[]> {
