@@ -19,6 +19,10 @@ const PROJECT_OVERRIDES: Record<string, Partial<SiteConfig["projects"][0]>> = {
     repo: "klinikiq",
     stack: ["Python", "FastAPI", "Next.js", "PostgreSQL", "Docker", "React Native"],
   },
+  veridian: {
+    url: "https://veridian.furkanguven.space",
+    repo: "Veridian",
+  },
 };
 
 export function mapPortfolioToSite(portfolio: PortfolioData, existing?: SiteConfig): SiteConfig {

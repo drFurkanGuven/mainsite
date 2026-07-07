@@ -116,7 +116,7 @@
     {
       "id": "proj-veridian",
       "title": "Veridian",
-      "url": "https://github.com/drFurkanGuven/Veridian",
+      "url": "https://veridian.furkanguven.space",
       "description": "Tarayıcı tabanlı FPGA IDE. FPGA projelerini web üzerinden geliştirme ve yönetme.",
       "techStack": ["Python", "TypeScript", "Docker"]
     },

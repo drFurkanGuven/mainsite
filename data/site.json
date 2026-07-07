@@ -60,7 +60,7 @@
       "id": "veridian",
       "name": "Veridian",
       "description": "Tarayıcı tabanlı FPGA IDE. FPGA projelerini web üzerinden geliştirme ve yönetme.",
-      "url": "https://github.com/drFurkanGuven/Veridian",
+      "url": "https://veridian.furkanguven.space",
       "repo": "Veridian",
       "stack": [
         "Python",
@@ -179,7 +179,7 @@
   ],
   "linkedin": {
     "syncEnabled": false,
-    "lastSynced": "2026-07-07T20:14:11.493Z",
+    "lastSynced": "2026-07-07T20:16:21.716Z",
     "source": "portfolio.json",
     "portfolioPath": "./data/portfolio.json"
   }
