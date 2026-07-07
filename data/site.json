@@ -55,6 +55,32 @@
         "Siber Güvenlik",
         "Veri Analizi"
       ]
+    },
+    {
+      "id": "veridian",
+      "name": "Veridian",
+      "description": "Tarayıcı tabanlı FPGA IDE. FPGA projelerini web üzerinden geliştirme ve yönetme.",
+      "url": "https://github.com/drFurkanGuven/Veridian",
+      "repo": "Veridian",
+      "stack": [
+        "Python",
+        "TypeScript",
+        "Docker"
+      ]
+    },
+    {
+      "id": "meshwave",
+      "name": "MeshWave",
+      "description": "ESP32 için yerel LoRa mesajlaşma yığını. E220 (UART) ve SX1278 (SPI) radyolarını tek protokol altında birleştirir.",
+      "url": "https://github.com/drFurkanGuven/MeshWave",
+      "repo": "MeshWave",
+      "stack": [
+        "C++",
+        "C",
+        "Python",
+        "ESP32",
+        "LoRa"
+      ]
     }
   ],
   "experience": [
@@ -153,7 +179,7 @@
   ],
   "linkedin": {
     "syncEnabled": false,
-    "lastSynced": "2026-07-06T08:55:45.144Z",
+    "lastSynced": "2026-07-07T20:14:11.493Z",
     "source": "portfolio.json",
     "portfolioPath": "./data/portfolio.json"
   }

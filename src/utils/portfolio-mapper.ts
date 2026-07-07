@@ -52,7 +52,7 @@ export function mapPortfolioToSite(portfolio: PortfolioData, existing?: SiteConf
     github: existing?.github ?? {
       username: GITHUB_USER,
       featuredRepos: ["klinikiq"],
-      excludeRepos: [],
+      excludeRepos: ["mainsite", "FurkanSpace"],
     },
     projects: portfolio.projects.map(mapProject),
     experience: portfolio.experience.map(mapExperience),
@@ -125,19 +125,28 @@ function mapCertificate(cert: PortfolioData["certifications"][0]) {
 function projectId(project: PortfolioProject): string {
   if (/klinikiq/i.test(project.title)) return "klinikiq";
   if (/bkzs|anti-spoofing/i.test(project.title)) return "bkzs";
+  if (/veridian/i.test(project.title)) return "veridian";
+  if (/meshwave/i.test(project.title)) return "meshwave";
   const fromId = project.id.replace(/^proj-/, "");
   if (fromId && !/^\d+$/.test(fromId)) return fromId;
   return project.title.toLowerCase().replace(/[^a-z0-9]+/gi, "-").replace(/^-|-$/g, "") || "project";
 }
 
+function repoFromUrl(url: string | null): string | null {
+  if (!url) return null;
+  const match = url.match(/github\.com\/[^/]+\/([^/?#]+)/i);
+  return match ? match[1] : null;
+}
+
 function mapProject(project: PortfolioProject): SiteConfig["projects"][0] {
   const id = projectId(project);
+  const url = normalizeUrl(project.url);
   const base = {
     id,
     name: project.title,
     description: project.description.trim(),
-    url: normalizeUrl(project.url),
-    repo: id === "klinikiq" ? "klinikiq" : null,
+    url,
+    repo: repoFromUrl(url),
     stack: [...project.techStack],
   };
 

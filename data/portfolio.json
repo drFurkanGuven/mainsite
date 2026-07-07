@@ -112,6 +112,20 @@
       "title": "BKZS Anti-Spoofing Çok Katmanlı Anomali Tespiti",
       "description": "TUA (Türkiye Uzay Ajansı) Hackathon'u kapsamında geliştirilen, uydu ve uzay sistemleri için çok katmanlı güvenlik ve spoofing engelleme projesi.",
       "techStack": ["Python", "Siber Güvenlik", "Veri Analizi"]
+    },
+    {
+      "id": "proj-veridian",
+      "title": "Veridian",
+      "url": "https://github.com/drFurkanGuven/Veridian",
+      "description": "Tarayıcı tabanlı FPGA IDE. FPGA projelerini web üzerinden geliştirme ve yönetme.",
+      "techStack": ["Python", "TypeScript", "Docker"]
+    },
+    {
+      "id": "proj-meshwave",
+      "title": "MeshWave",
+      "url": "https://github.com/drFurkanGuven/MeshWave",
+      "description": "ESP32 için yerel LoRa mesajlaşma yığını. E220 (UART) ve SX1278 (SPI) radyolarını tek protokol altında birleştirir.",
+      "techStack": ["C++", "C", "Python", "ESP32", "LoRa"]
     }
   ],
   "skills": {
