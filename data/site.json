@@ -81,6 +81,21 @@
         "ESP32",
         "LoRa"
       ]
+    },
+    {
+      "id": "farmacograph",
+      "name": "FarmacoGraph",
+      "description": "Tıbbi bilgiyi açıklanabilir bir biyomedikal bilgi grafında birleştiren; ilaç, mekanizma ve kanıt ilişkilerini yönetmek için API ve kürasyon stüdyosu sunan platform.",
+      "url": "https://farmacograph.furkanguven.space",
+      "repo": "FarmacoGraph",
+      "stack": [
+        "Python",
+        "FastAPI",
+        "Next.js",
+        "Neo4j",
+        "PostgreSQL",
+        "Docker"
+      ]
     }
   ],
   "experience": [

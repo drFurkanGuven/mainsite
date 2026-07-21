@@ -23,6 +23,10 @@ const PROJECT_OVERRIDES: Record<string, Partial<SiteConfig["projects"][0]>> = {
     url: "https://veridian.furkanguven.space",
     repo: "Veridian",
   },
+  farmacograph: {
+    url: "https://farmacograph.furkanguven.space",
+    repo: "FarmacoGraph",
+  },
 };
 
 export function mapPortfolioToSite(portfolio: PortfolioData, existing?: SiteConfig): SiteConfig {
@@ -131,6 +135,7 @@ function projectId(project: PortfolioProject): string {
   if (/bkzs|anti-spoofing/i.test(project.title)) return "bkzs";
   if (/veridian/i.test(project.title)) return "veridian";
   if (/meshwave/i.test(project.title)) return "meshwave";
+  if (/farmacograph/i.test(project.title)) return "farmacograph";
   const fromId = project.id.replace(/^proj-/, "");
   if (fromId && !/^\d+$/.test(fromId)) return fromId;
   return project.title.toLowerCase().replace(/[^a-z0-9]+/gi, "-").replace(/^-|-$/g, "") || "project";

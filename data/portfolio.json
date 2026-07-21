@@ -126,6 +126,13 @@
       "url": "https://github.com/drFurkanGuven/MeshWave",
       "description": "ESP32 için yerel LoRa mesajlaşma yığını. E220 (UART) ve SX1278 (SPI) radyolarını tek protokol altında birleştirir.",
       "techStack": ["C++", "C", "Python", "ESP32", "LoRa"]
+    },
+    {
+      "id": "proj-farmacograph",
+      "title": "FarmacoGraph",
+      "url": "https://farmacograph.furkanguven.space",
+      "description": "Tıbbi bilgiyi açıklanabilir bir biyomedikal bilgi grafında birleştiren; ilaç, mekanizma ve kanıt ilişkilerini yönetmek için API ve kürasyon stüdyosu sunan platform.",
+      "techStack": ["Python", "FastAPI", "Next.js", "Neo4j", "PostgreSQL", "Docker"]
     }
   ],
   "skills": {
