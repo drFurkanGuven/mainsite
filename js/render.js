@@ -54,10 +54,6 @@ export function renderHero(profile) {
   if (profile.links.linkedin?.url) {
     links.push(el("li", {}, [link(profile.links.linkedin.url, "LinkedIn", true)]));
   }
-  const klinikiq = profile.projects.find((p) => p.id === "klinikiq");
-  if (klinikiq?.url) {
-    links.push(el("li", {}, [link(klinikiq.url, "KlinikIQ", true)]));
-  }
 
   root.replaceChildren(
     el("div", { className: "container container--narrow fade-in" }, [

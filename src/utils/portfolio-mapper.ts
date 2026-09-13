@@ -11,23 +11,7 @@ const SITE_URL = "https://furkanguven.space";
 
 const MONTHS_TR = ["Oca", "Şub", "Mar", "Nis", "May", "Haz", "Tem", "Ağu", "Eyl", "Eki", "Kas", "Ara"];
 
-const PROJECT_OVERRIDES: Record<string, Partial<SiteConfig["projects"][0]>> = {
-  klinikiq: {
-    description:
-      "Tıp öğrencileri için vaka simülasyonu. FastAPI backend, Next.js frontend, React Native mobil uygulama.",
-    url: "https://klinikiq.furkanguven.space",
-    repo: "klinikiq",
-    stack: ["Python", "FastAPI", "Next.js", "PostgreSQL", "Docker", "React Native"],
-  },
-  veridian: {
-    url: "https://veridian.furkanguven.space",
-    repo: "Veridian",
-  },
-  farmacograph: {
-    url: "https://farmacograph.furkanguven.space",
-    repo: "FarmacoGraph",
-  },
-};
+const PROJECT_OVERRIDES: Record<string, Partial<SiteConfig["projects"][0]>> = {};
 
 export function mapPortfolioToSite(portfolio: PortfolioData, existing?: SiteConfig): SiteConfig {
   const { profile } = portfolio;
@@ -37,7 +21,7 @@ export function mapPortfolioToSite(portfolio: PortfolioData, existing?: SiteConf
     "Fırat Üniversitesi Tıp Fakültesi, 3. dönem. FastAPI, Next.js, sağlık teknolojileri.";
 
   const metaDescription =
-    "Tıp öğrencisi. FastAPI, Next.js ve React Native. KlinikIQ, Linux, nöromorfik sistemler.";
+    "Tıp öğrencisi. FastAPI, Next.js ve React Native. Linux, nöromorfik sistemler.";
 
   return {
     meta: {
@@ -59,7 +43,7 @@ export function mapPortfolioToSite(portfolio: PortfolioData, existing?: SiteConf
     },
     github: existing?.github ?? {
       username: GITHUB_USER,
-      featuredRepos: ["klinikiq"],
+      featuredRepos: [],
       excludeRepos: ["mainsite", "FurkanSpace"],
     },
     projects: portfolio.projects.map(mapProject),

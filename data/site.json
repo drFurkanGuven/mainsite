@@ -2,7 +2,7 @@
   "meta": {
     "siteUrl": "https://furkanguven.space",
     "title": "Furkan Güven",
-    "description": "Tıp öğrencisi. FastAPI, Next.js ve React Native. KlinikIQ, Linux, nöromorfik sistemler."
+    "description": "Tıp öğrencisi. FastAPI, Next.js ve React Native. Linux, nöromorfik sistemler."
   },
   "identity": {
     "name": "Furkan Güven",
@@ -23,27 +23,10 @@
   },
   "github": {
     "username": "drFurkanGuven",
-    "featuredRepos": [
-      "klinikiq"
-    ],
+    "featuredRepos": [],
     "excludeRepos": []
   },
   "projects": [
-    {
-      "id": "klinikiq",
-      "name": "KlinikIQ",
-      "description": "Tıp öğrencileri için vaka simülasyonu. FastAPI backend, Next.js frontend, React Native mobil uygulama.",
-      "url": "https://klinikiq.furkanguven.space",
-      "repo": "klinikiq",
-      "stack": [
-        "Python",
-        "FastAPI",
-        "Next.js",
-        "PostgreSQL",
-        "Docker",
-        "React Native"
-      ]
-    },
     {
       "id": "bkzs",
       "name": "BKZS Anti-Spoofing Çok Katmanlı Anomali Tespiti",
@@ -54,18 +37,6 @@
         "Python",
         "Siber Güvenlik",
         "Veri Analizi"
-      ]
-    },
-    {
-      "id": "veridian",
-      "name": "Veridian",
-      "description": "Tarayıcı tabanlı FPGA IDE. FPGA projelerini web üzerinden geliştirme ve yönetme.",
-      "url": "https://veridian.furkanguven.space",
-      "repo": "Veridian",
-      "stack": [
-        "Python",
-        "TypeScript",
-        "Docker"
       ]
     },
     {
@@ -80,21 +51,6 @@
         "Python",
         "ESP32",
         "LoRa"
-      ]
-    },
-    {
-      "id": "farmacograph",
-      "name": "FarmacoGraph",
-      "description": "Tıbbi bilgiyi açıklanabilir bir biyomedikal bilgi grafında birleştiren; ilaç, mekanizma ve kanıt ilişkilerini yönetmek için API ve kürasyon stüdyosu sunan platform.",
-      "url": "https://farmacograph.furkanguven.space",
-      "repo": "FarmacoGraph",
-      "stack": [
-        "Python",
-        "FastAPI",
-        "Next.js",
-        "Neo4j",
-        "PostgreSQL",
-        "Docker"
       ]
     }
   ],
